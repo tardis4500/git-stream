@@ -1,0 +1,4 @@
+include README.md
+include DOCUMENTATION.md
+include CHANGELOG.md
+include git_stream/py.typed
