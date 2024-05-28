@@ -6,8 +6,14 @@ project:
 test:
   steps:
     - type: flake8
+      targets:
+        - git_stream
     - type: pylint
+      targets:
+        - git_stream
     - type: mypy
+      targets:
+        - git_stream
 build:
   steps:
     - type: flit

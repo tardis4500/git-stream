@@ -24,21 +24,12 @@ classifiers = [
 ]
 
 dependencies = [
-    "BatCave",
-    "bumpver",
-    "junitparser",
-    "flake8",
-    "flake8-annotations",
-    "flake8-pyproject",
-    "flit",
-    "mypy",
-    "pylint",
-    "unittest-xml-reporting",
+    "BatCave"
 ]
 
 [project.optional-dependencies]
-dev = ["twine"]
-test = ["types-PyYAML", "types-requests"]
+dev = ["vjer"]
+# test = []
 # doc = []
 
 [project.scripts]
@@ -93,4 +84,4 @@ tag = false
 push = true
 
 [tool.bumpver.file_patterns]
-"git-stream/__init__.py" = ["__version__ = '{pep440_version}'"]
+"git_stream/__init__.py" = ["__version__ = '{pep440_version}'"]
