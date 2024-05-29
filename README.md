@@ -1,6 +1,6 @@
 # git-stream Python Module
 
-A module for automating CI/CD tasks.
+A command line tool to implement streams in Git.
 
 ## Developing
 

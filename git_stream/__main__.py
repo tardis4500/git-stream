@@ -44,7 +44,7 @@ DEFAULTS = DotMap(default_parent='main',
                   default_pr_reviewer='',
                   delivery_branch_template='%t_%d',
                   stream_branch_prefix=f'{getuser()}/',
-                  stream_home=Path('~/git/streams').expanduser())
+                  stream_home=str(Path('~/git/streams').expanduser()))
 DELIVERY_REPLACERS = {'%t': 'ticket',
                       '%d': 'description'}
 
@@ -161,7 +161,7 @@ class Stream:
 def main() -> None:
     """The main entry point."""
     if not CONFIG.exists():
-        _write_config(DEFAULTS | DotMap(streams={}))
+        _write_config(DEFAULTS | DotMap(schema=CONFIG_SCHEMA, streams={}))
     Commander('Git Stream Manager', subparsers=[SubParser('add_parent', lambda a: stream_action('add_parent', **vars(a)), [Argument('parent')]),
                                                 SubParser('config', configurator, [Argument('-s', '--set')]),
                                                 SubParser('create', create, [Argument('-p', '--parent'), Argument('-t', '--ticket'), Argument('-d', '--delivery-branch'),
@@ -250,7 +250,7 @@ def create(args: Namespace) -> None:
                                           description=args.name,
                                           branch=stream_branch,
                                           parents=[parent],
-                                          schema=CONFIG_SCHEMA)
+                                          schema=STREAM_SCHEMA)
     for item in ('delivery_branch', 'ticket'):
         if value := getattr(args, item):
             config.streams[stream_name][item] = value
