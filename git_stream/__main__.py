@@ -201,7 +201,8 @@ def _write_config(new_config: DotMap) -> None:
     try:
         dotmap_to_yaml(new_config, CONFIG)
     except:  # noqa:E722
-        copyfile(CONFIG_BAK, CONFIG)
+        if CONFIG_BAK.exists():
+            copyfile(CONFIG_BAK, CONFIG)
         raise
 
 
