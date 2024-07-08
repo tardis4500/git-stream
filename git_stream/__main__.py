@@ -7,7 +7,9 @@ Enables use as module: $ python -m git-stream --version
 
 # TODO:
 #   Store as a module and install with pip
+#   Move config to OS correct location
 #   Add to BatCave.cms
+#       DATA_CACHE_DIR
 #       branch property to return current branch name: _client.active_branch
 #       delete remote branch: _client.git.push('origin', '--delete', branch)
 #       new branch creation:
