@@ -1,4 +1,5 @@
 name: Git Stream Publish
+run-name: Git Stream Publish - ${{ github.run_id }}
 
 on:
   workflow_dispatch:

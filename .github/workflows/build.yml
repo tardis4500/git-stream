@@ -1,5 +1,5 @@
 name: Git Stream Build
-run-name: Build - ${{ github.run_id }}
+run-name: Git Stream Build - ${{ github.run_id }}
 on:
   workflow_dispatch:
   push:
