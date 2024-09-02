@@ -13,7 +13,7 @@ __title__ = 'git-stream'
 __summary__ = 'CI/CD Toolkit'
 __uri__ = 'https://github.com/tardis4500/git-stream/'
 
-__version__ = '1.0.1rc1'
+__version__ = '1.0.1'
 __build_name__ = '{var:build_name}'
 __build_date__ = '{var:build_date}'
 
