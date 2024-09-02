@@ -1,8 +1,15 @@
 name: Git Stream Build
+run-name: Build - ${{ github.run_id }}
 on:
-  push:
-  pull_request:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+      - release/*
+  pull_request:
+    branches:
+      - main
+      - release/*
 concurrency:
   group: ${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
