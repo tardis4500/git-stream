@@ -28,7 +28,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["vjer"]
+dev = ["vjer", "bumpver"]
 # test = []
 # doc = []
 
