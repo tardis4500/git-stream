@@ -13,7 +13,7 @@ __title__ = 'git-stream'
 __summary__ = 'Git Stream Implementation'
 __uri__ = 'https://github.com/arisilon/git-stream/'
 
-__version__ = '4.0.0rc0'
+__version__ = '4.0.0rc1'
 __build_name__ = '{var:build_name}'
 __build_date__ = '{var:build_date}'
 
